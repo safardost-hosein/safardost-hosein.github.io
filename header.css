@@ -1,0 +1,314 @@
+header{
+    background-color:var(--color-black-600);
+}
+nav .navbar{
+    display: flex;
+    height: 12vh;
+    border-bottom: 2px solid   var( --color-black-300) ;
+}
+nav .navbar .logo{
+    background: url(/images/main.png);
+    background-size: 100% 100%;
+    flex: 0.1;
+}
+
+nav .navbar .nav-items{
+    flex: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .navbar .nav-items ul{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .navbar .nav-items ul li{
+    flex:1;
+    text-align: center;
+}
+ /* start --animation nav bar hover */
+nav .navbar .nav-items ul li a{
+    color: var( --color-white-900);
+    font-size: 1.4em;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+nav .navbar .nav-items ul li a:focus , nav .navbar .nav-items ul li a:hover{
+    color: var( --color-white-900);
+}
+nav .navbar .nav-items ul li a:focus:after , nav .navbar .nav-items ul li a:hover:after{
+    width: 100%;
+    left: 0%;
+}
+nav .navbar .nav-items ul li a:after{
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var( --color-white-900);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+/* end --animation nav bar hover */
+nav .navbar .nav-btn{
+    flex: 0.1;
+    margin: auto ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  
+  
+}
+
+/* شروع ساید بار */ /* شروع ساید بار */ /* شروع ساید بار */
+
+
+nav .navbar {
+    position: relative;
+}
+nav .navbar .gap {
+    display: none;
+}
+nav .navbar .hamburger-icon {
+    position: relative;
+    display: none;
+    color: var(--color-yellow-900);
+ }
+nav .navbar .hamburger-icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--title-600-size)
+}
+nav .navbar .sideNav{
+    position: absolute;
+    top:0;
+    right: -170px;
+    background-color:var( --color-yellow-400);
+    height: 100vh;
+    z-index: 1;
+    transition: all 0.5s linear;
+}
+nav .navbar .sideNav  i{
+    font-size: var(--title-600-size);
+}
+.sideNav ul li {
+    margin: 20px 0;
+}
+.sideNav ul li:hover{
+    background-color: var( --color-yellow-900);
+}
+
+
+
+
+/* پایان ساید بار *//* پایان ساید بار *//* پایان ساید بار */
+
+
+
+
+nav .navbar .nav-btn a{
+  
+    padding: 10% 10%;
+    color: var( --color-yellow-900);
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: var( --title-400-size);
+    border: 1px solid var(--color-yellow-900);
+
+}
+nav .navbar .nav-btn a:hover{
+    color:var(--color-black-900);
+    background-color: var(--color-yellow-900);
+    transition: all 0.2s ease-in;
+}
+
+/*nav-content of nav*/
+
+.nav-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.nav-content .paragraph{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 10px;
+    
+    
+
+}
+.nav-content .paragraph .main-title{
+    flex: 1;
+    text-align: center;
+    color: var(--color-white-900);
+    margin-top: 8%;
+    font-size: calc(2.3em + 0.8vw);
+}
+.nav-content .paragraph .sub-title{
+    flex: 1;
+    text-align: center;
+    color:var( --color-black-300);
+    font-size:calc(1em + 0.5vw);
+    margin: 8% 0;
+}
+
+
+/*images of nav*/
+
+
+nav .nav-content .container{
+    display: flex;
+    width: 90vw;
+    flex-wrap: wrap;
+}
+nav .nav-content .container .panel {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    border-radius: 10px;
+    margin: 0 1%;
+    color: #fff;
+    position: relative;
+    transition: flex 1.5s linear;
+    margin-bottom: 5%;
+
+}
+nav .nav-content .container .panel .img-text{
+    font-size: var(--title-500-size);
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    margin: 0;
+    opacity: 0;
+}
+nav .nav-content .container .panel.active{
+    flex:5;
+}
+nav .nav-content .container .panel.active .img-text{
+    opacity: 1 ;
+    transition: opacity 1s ease-in 1s ;
+} 
+nav .nav-content .container .panel .img-text h3{
+    font-size: calc(0.8em + 0.8vw);
+}
+nav .nav-content .container .panel .img-text .container-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .nav-content .container .panel .img-text .container-btn a{
+    margin-right: 5%;
+    color:var(--color-white-900);
+    font-size: calc(0.5em + 0.8vw);
+    background: rgba(0,0,0, 0.5);
+    padding: 0px 5px;
+    border-radius: 20px;
+}
+nav .nav-content .container .panel .img-text .container-btn a:hover{
+    background-color:var(--color-yellow-900);
+    color:var(--color-black-900);
+    transition: background-color 0.5s ease;
+}
+
+@media screen and (max-width: 600px) {
+
+    /* شروع ساید نو */
+    nav .navbar{
+        height: 8vh;
+        border: 0;
+    }
+    nav .navbar .nav-btn{
+    display: none ;
+  }  
+  nav .navbar .nav-items{
+    display: none;
+  }
+
+  nav .navbar .logo{
+    flex: 0.3;
+  }
+  nav .navbar .gap {
+    display: block;
+    flex: 0.6;
+  }
+  nav .navbar .hamburger-icon{
+    display: block;
+    flex: 0.1;
+  }
+/* پایان ساید نو */
+
+  /* شروع اسلایدر */
+
+  .nav-content .paragraph .main-title{
+    font-size: calc(1.5em + 0.8vw);
+  }
+  .nav-content .paragraph .sub-title{
+    font-size:calc(0.8em + 0.5vw)
+  }
+  
+
+
+nav .nav-content .container .panel{
+    height: 40vh;
+}
+nav .nav-content .container .panel .img-text h3{
+    font-size: 0.8em;
+}
+
+
+
+/* پایان اسلایدر */
+
+  
+}
+
+@media screen and (min-width: 600px) and (max-width:1000px) {
+    nav .navbar .logo{
+        flex: 0.2;
+    
+}
+nav .navbar .nav-items{
+   flex: 0.6;
+  }
+
+  nav .navbar .nav-btn{
+   flex: 0.2;
+  }  
+}
+
+
+ 
+  
+ 
+  
+ 
+  
+
+
+
+
+
+

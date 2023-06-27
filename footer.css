@@ -1,0 +1,74 @@
+
+
+footer .title{
+    background-color: var(--color-yellow-900)
+}
+footer .title .main-title{
+    font-size: 1.8em;
+    text-align: center;
+    text-wrap: balance;
+}
+footer .title .sub-title{
+    color:var(--color-black-300);
+    font-size: 1em;
+    text-align: center;
+} 
+footer .title .btn{
+    text-align: center;
+}
+footer .title .btn button{
+    background-color:var(--color-black-900);
+    border-radius: 20px;
+    outline: 0;
+    color: var(--color-white-900);
+    font-size: 0.8em;
+    outline: 0;
+    margin: 20px auto;
+}
+footer .social-media{
+    background-color: var(--color-black-600);
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+footer .social-media .logo{
+    flex: 20%;
+    background: url(/images/main.png);
+    background-size: 100% 100%;
+    
+}
+
+footer .social-media .icons{
+    flex:80%;
+}
+footer .social-media .icons a img{
+    width:60px ;
+    height: 60px;
+}
+@media screen and (max-width:600px){
+    footer .title .main-title{
+        font-size: 0.8em;
+       
+    }
+    footer .title .sub-title{
+        font-size: 0.4em;
+        margin-top: 10px;
+    }
+    footer .title .btn{
+        font-size: 0.5em;
+        margin: 0;
+    }
+    footer .social-media .icons a img{
+        width: 50px;
+
+    }
+    footer .social-media .logo{
+        flex: 30%;
+    }
+    footer .social-media .icons{
+        flex: 70%;
+    }
+
+
+    
+}
