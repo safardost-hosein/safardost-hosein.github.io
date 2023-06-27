@@ -41,7 +41,7 @@ function  removeActiveClasses(){
     })
 }
 /*باز بسته شدن اسلاید به صورت اتوماتیک*/
-// const intervalId = setInterval(show, 4000);
+ const intervalId = setInterval(show, 4000);
 
 function show() {
     panels.forEach((panel, index) => {
