@@ -3,6 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 20px;
   
 }
 .projects .projects-contianer{
@@ -86,11 +88,33 @@
     flex: 1;
     overflow-y: scroll;
 }
-.projects .projects-contianer .projects-demo  img{
-       width: 100%;
+/* .projects .projects-contianer .projects-demo .controls{
+    display: none;
 }
+
+.projects .projects-contianer .projects-demo.side {
+    position: relative;
+}
+.projects .projects-contianer .projects-demo.side .controls{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ width: 100%;
+ justify-content: space-between;
+ border: 1px solid red;
+ align-items: center;
+
+    
+} */
+
 .projects .projects-contianer .projects-demo  img:nth-child(1){
     display: none;
+}
+.projects .projects-contianer .projects-demo  img{
+    width: 100%;
 }
 
 /* پایان قسمت عکس */
