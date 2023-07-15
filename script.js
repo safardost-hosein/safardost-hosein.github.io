@@ -12,17 +12,16 @@ xBtn.addEventListener('click',()=>{
 /* پایان خانه */
 
 /* شروع پروژه */
-const rangeBtn=document.querySelector('.mode-toggle')
-
-function show(){
-if(rangeBtn.value==1){
-document.getElementById('desktop').style.display='block'
-document.getElementById('mobile').style.display='none'
-}
-else{
-document.getElementById('mobile').style.display='block'
-document.getElementById('desktop').style.display='none'
-}
-}
-rangeBtn.addEventListener('input', show);
-/* پایان خانه */
+function show(input) {
+    var container = input.closest('.projects-contianer');
+    var desktopImage = container.querySelector('#desktop');
+    var mobileImage = container.querySelector('#mobile');
+    if (input.value == 1) {
+        desktopImage.style.display = 'block';
+        mobileImage.style.display = 'none';
+    } else {
+        mobileImage.style.display = 'block';
+        desktopImage.style.display = 'none';
+    }
+} 
+/* پایان پروژه */
