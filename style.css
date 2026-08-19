@@ -1,178 +1,398 @@
-
-/* شروع هد */
-/* body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-} */
-header{
-    width: 100%;
-    height: 10vh;
-    display: block;
-} 
-nav{
-height: 100%;
-background-color: #4070F4;
-}
-nav .navbar{
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
-position: relative;
-height: 100%;
-}
-nav .navbar .hamburger-btn{
-    display: none;
-}
-nav .navbar .gap{
-    flex: 0.7;
-}
-nav .navbar ul{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex: 0.3;
-    flex-direction: row;
-    gap: 50px;
-}
-nav .navbar ul li:hover{
-    color:#E4E9F7;
+/* --- فراخوانی فونت --- */
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('fonts/Vazirmatn-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
-nav .side-nav{
-    position: absolute;
-    right:-100%;
-    top:0;
-    width: 50%;
-    background-color:#88a6f8;
-    height: 100%;
-    transition:right  1s ease-in ;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+/* --- تنظیمات پایه --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-nav .side-nav .x-btn {
-    font-size: 3em;
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: #f4f7f9;
+    color: #333333;
+    line-height: 1.6;
 }
-nav .side-nav ul{
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* --- هدر پروفایل --- */
+.profile-header {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    margin-bottom: 40px;
+    border: 1px solid #e2e8f0;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-left: 25px;
+    border: 3px solid #f8fafc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.profile-info h1 {
+    font-size: 24px;
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+.profile-info p {
+    font-size: 16px;
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+.contact-links {
+    display: flex;
     gap: 20px;
-    padding: 20px;
+    font-size: 14px;
+    color: #334155;
+    font-weight: bold;
 }
-/* پایان هد */
 
-section {
+/* --- گرید نمونه کارها --- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+/* --- استایل کلی کارت --- */
+.card {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-}
-.carts{
-    display:flex;
-    flex-direction:row;
-    flex-wrap: wrap;
+    flex-direction: column; /* چیدمان ستونی برای قرارگیری آکاردئون در پایین */
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+    padding: 30px;
+    gap: 30px; /* فاصله بین بخش بالا و آکاردئون */
+    border: 1px solid #e2e8f0;
 }
 
-.carts .container{
-    flex: 50%;
+/* --- بخش بالایی کارت (متن و لپ‌تاپ) --- */
+.card-top {
     display: flex;
-    height: 40vh;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
 }
-.carts .container .shape{
-    animation: morph 8s ease-in-out infinite;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    height: 350px;
-    width: 350px;
-    background-image: url(/images/hsn.jpg);
-    background-size: 100% 100%;
-   
 
-}
-@keyframes morph {
-    0% {
-              border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
-      } 
-      
-      50% {
-              border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
-     }
-    
-      100% {
-          border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
-      } 
-  }
-.carts .about-me{
-    flex: 50%;
-    text-align: center;
+.card-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
-.carts .about-me h1{
-    flex: 1;
-   font-size: 3em;
-   white-space: nowrap;
-   text-align: start;
-}
-.carts .about-me  p{
-    flex: 1;
-    font-size: 1.5em;
-    color: #696969;
-    text-align: start;
-}
-.carts .tech{
-    flex: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    gap: 0 50px;
-}
-.carts .tech img{
-    width: 40px;
-}
-    @media screen and (max-width:900px) {
-        .carts{
-            flex-direction: column;
-        }
-    nav .navbar .hamburger-btn{
-        display: block;
-        font-size: 3em;
-        cursor: pointer;
-    }
-    .carts .about-me{
-    
-    }
 
-    nav .navbar ul,
-    nav .navbar .gap{
-        display: none;
-    }
-    .carts .container .shape{
-        width: 250px;
-        height: 250px;
-    }
-    .carts .about-me h1{
-        font-size: 1.5em;
+.card-content h2 {
+    font-size: 22px;
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+.card-content > p {
+    font-size: 15px;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* لوگوهای تکنولوژی */
+.tech-stack {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.tech-logo {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* دکمه مشاهده سایت */
+.site-link {
+    align-self: flex-start;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 12px 24px;
+    background-color: #2563eb;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.site-link:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.4);
+}
+
+/* --- موکاپ لپ‌تاپ --- */
+.laptop-container {
+    width: 360px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auto-scroll-screen {
+    width: 90%;
+    aspect-ratio: 16 / 10;
+    border: 12px solid #1e293b;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #0f172a;
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.auto-scroll-screen img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: top; 
+    transition: object-position 5s ease-in-out;
+}
+
+.auto-scroll-screen.scrolling-down img {
+    object-position: bottom;
+}
+
+.laptop-base {
+    width: 100%;
+    height: 18px;
+    background: linear-gradient(to bottom, #cbd5e1, #94a3b8);
+    border-radius: 0 0 18px 18px;
+    position: relative;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.laptop-base::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background-color: #64748b;
+    border-radius: 0 0 4px 4px;
+}
+
+/* ========================================= */
+/* --- آکاردئون و زرق‌وبرق توضیحات --- */
+/* ========================================= */
+
+.card-accordion {
+    width: 95%; /* عرض ۹۵ درصد کارت */
+    margin: 0 auto; /* وسط‌چین کردن آکاردئون در پایین کارت */
+    background-color: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+}
+
+.card-accordion[open] {
+    border-color: #cbd5e1;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.card-accordion summary {
+    padding: 16px 20px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #f8fafc;
+    color: #1e293b;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.card-accordion summary:hover {
+    background-color: #f1f5f9;
+}
+
+.card-accordion summary::after {
+    content: '\f078';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 14px;
+    color: #64748b;
+    transition: transform 0.3s ease;
+}
+
+.card-accordion[open] summary::after {
+    transform: rotate(180deg);
+    color: #2563eb;
+}
+
+/* استایل لیست ویژگی‌ها (Feature List) */
+.accordion-content {
+    padding: 20px;
+    border-top: 2px solid #f1f5f9;
+}
+
+.feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* استایل هر ردیف از ویژگی‌ها */
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+    border-color: #e2e8f0;
+}
+
+/* آیکون‌های رنگی و جذاب */
+.feature-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #eff6ff;
+    color: #3b82f6;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+/* رنگ‌های اختصاصی برای آیکون‌های ابزار آرنا */
+.speed-icon { background-color: #fef3c7; color: #d97706; }
+.data-icon { background-color: #dcfce3; color: #16a34a; }
+.sync-icon { background-color: #ede9fe; color: #7c3aed; }
+
+/* متن ویژگی‌ها */
+.feature-text {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #475569;
+    padding-top: 2px;
+}
+
+.feature-text strong {
+    color: #0f172a;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* بج (Badge) قرمز رنگ (بدون افزونه اضافی) */
+.highlight-badge {
+    background-color: #fee2e2;
+    color: #dc2626;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+/* متن هایلایت آبی رنگ (خودکار و در لحظه) */
+.highlight-text {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    padding: 0 6px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* --- واکنش‌گرایی برای موبایل --- */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
         text-align: center;
     }
-    .carts .about-me  p{
-        font-size: 0.8em;
-        margin: 20px 10px;
-
+    .profile-img {
+        margin-left: 0;
+        margin-bottom: 20px;
     }
-    .carts .tech{
-        gap: 0 20px;
-        justify-content: end;
+    
+    /* در موبایل، لپ‌تاپ می‌رود بالای متن */
+    .card-top {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
     }
-
-    .carts .tech img{
-    width: 30px;
-
-
+    
+    .laptop-container {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .tech-stack {
+        justify-content: center;
+    }
+    
+    .site-link {
+        align-self: center;
+    }
+    
+    .card-accordion {
+        width: 100%; /* در موبایل تمام عرض را بگیرد */
+    }
+    
+    .feature-list li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .feature-text,
+ 
+.feature-text em, 
+.feature-text span {
+    font-size: 12px;
 }
-
-
+.feature-text strong {
+    font-size: 14px;
+}
 }
