@@ -1,4 +1,4 @@
-/* --- فراخوانی فونت --- */
+
 @font-face {
     font-family: 'Vazirmatn';
     src: url('fonts/Vazirmatn-Regular.woff2') format('woff2');
@@ -6,7 +6,7 @@
     font-style: normal;
 }
 
-/* --- تنظیمات پایه --- */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -26,7 +26,7 @@ body {
     padding: 0 20px;
 }
 
-/* --- هدر پروفایل --- */
+
 .profile-header {
     display: flex;
     align-items: center;
@@ -67,26 +67,26 @@ body {
     font-weight: bold;
 }
 
-/* --- گرید نمونه کارها --- */
+
 .portfolio-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
 }
 
-/* --- استایل کلی کارت --- */
+
 .card {
     display: flex;
-    flex-direction: column; /* چیدمان ستونی برای قرارگیری آکاردئون در پایین */
+    flex-direction: column;
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.04);
     padding: 30px;
-    gap: 30px; /* فاصله بین بخش بالا و آکاردئون */
+    gap: 30px; 
     border: 1px solid #e2e8f0;
 }
 
-/* --- بخش بالایی کارت (متن و لپ‌تاپ) --- */
+
 .card-top {
     display: flex;
     flex-direction: row;
@@ -114,7 +114,6 @@ body {
     margin-bottom: 25px;
 }
 
-/* لوگوهای تکنولوژی */
 .tech-stack {
     display: flex;
     gap: 15px;
@@ -129,7 +128,7 @@ body {
     object-fit: contain;
 }
 
-/* دکمه مشاهده سایت */
+
 .site-link {
     align-self: flex-start;
     font-size: 15px;
@@ -152,7 +151,7 @@ body {
     box-shadow: 0 6px 15px rgba(37, 99, 235, 0.4);
 }
 
-/* --- موکاپ لپ‌تاپ --- */
+
 .laptop-container {
     width: 360px;
     flex-shrink: 0;
@@ -207,13 +206,11 @@ body {
     border-radius: 0 0 4px 4px;
 }
 
-/* ========================================= */
-/* --- آکاردئون و زرق‌وبرق توضیحات --- */
-/* ========================================= */
+
 
 .card-accordion {
-    width: 95%; /* عرض ۹۵ درصد کارت */
-    margin: 0 auto; /* وسط‌چین کردن آکاردئون در پایین کارت */
+    width: 95%; 
+    margin: 0 auto; 
     background-color: #ffffff;
     border: 2px solid #e2e8f0;
     border-radius: 14px;
@@ -259,7 +256,7 @@ body {
     color: #2563eb;
 }
 
-/* استایل لیست ویژگی‌ها (Feature List) */
+
 .accordion-content {
     padding: 20px;
     border-top: 2px solid #f1f5f9;
@@ -272,7 +269,6 @@ body {
     gap: 15px;
 }
 
-/* استایل هر ردیف از ویژگی‌ها */
 .feature-list li {
     display: flex;
     align-items: flex-start;
@@ -305,7 +301,7 @@ body {
     flex-shrink: 0;
 }
 
-/* رنگ‌های اختصاصی برای آیکون‌های ابزار آرنا */
+
 .speed-icon { background-color: #fef3c7; color: #d97706; }
 .data-icon { background-color: #dcfce3; color: #16a34a; }
 .sync-icon { background-color: #ede9fe; color: #7c3aed; }
@@ -325,7 +321,7 @@ body {
     margin-bottom: 4px;
 }
 
-/* بج (Badge) قرمز رنگ (بدون افزونه اضافی) */
+
 .highlight-badge {
     background-color: #fee2e2;
     color: #dc2626;
@@ -337,7 +333,7 @@ body {
     display: inline-block;
 }
 
-/* متن هایلایت آبی رنگ (خودکار و در لحظه) */
+
 .highlight-text {
     background-color: #dbeafe;
     color: #1d4ed8;
@@ -346,7 +342,7 @@ body {
     font-weight: bold;
 }
 
-/* --- واکنش‌گرایی برای موبایل --- */
+
 @media (max-width: 768px) {
     .profile-header {
         flex-direction: column;
@@ -357,7 +353,7 @@ body {
         margin-bottom: 20px;
     }
     
-    /* در موبایل، لپ‌تاپ می‌رود بالای متن */
+   
     .card-top {
         flex-direction: column-reverse;
         align-items: center;
@@ -378,7 +374,7 @@ body {
     }
     
     .card-accordion {
-        width: 100%; /* در موبایل تمام عرض را بگیرد */
+        width: 100%; 
     }
     
     .feature-list li {
